@@ -6,9 +6,9 @@ const PORT = 5000;
 
 app.get("/", (req, res) => {
   res.send(
-    "Welcome to my docker-compose app!" +
+    "Welcome to my docker-compose app! " +
       process.env.APP +
-      "db_name" +
+      "db_name " +
       process.env.DB_NAME
   );
 });
