@@ -1,7 +1,10 @@
 version: "3.8"
+name: "main_container_of_compose"
 
 services:
   web:
+    image: "mero_image_from_compose"
+    container_name: "mero_node_container"
     build:
       context: .
       dockerfile: Dockerfile
@@ -12,7 +15,7 @@ services:
 
   db:
     image: postgres
-    container_name: "mero_container"
+    container_name: "mero_db_container"
     environment:
       POSTGRES_USER: "myuser"
       POSTGRES_PASSWORD: "mypassword"
